@@ -187,9 +187,10 @@ Issues and pull requests are welcome.
 
 ## Logo
 
-The LogicBoard logo was created for the project with Leonardo AI.
-`LogicBoard/branding/logo.png` is the 1024 px master; the app's icon
-(`assets/icons/logo.ico`, every size Windows uses) is generated from it.
+The LogicBoard logo was created for the project with ChatGPT.
+`LogicBoard/branding/logo-original.png` is the image as generated,
+`LogicBoard/branding/logo.png` the cleaned-up 1024 px master, and the app's
+icon (`assets/icons/logo.ico`, every size Windows uses) is generated from it.
 
 ## Licence
 

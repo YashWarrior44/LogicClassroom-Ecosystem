@@ -48,6 +48,9 @@ three apps update from this repository's Releases (`LogicBoard-v*` and
 **Everywhere**
 - Scrollbars are solid, wider and round-ended, so they can be seen and
   grabbed on a board.
+- A closed panel (Settings, the tool panels, Pages, Files, Media Manager)
+  is now freed instead of staying alive hidden until LogicBoard quits —
+  opening and closing them over a lesson no longer piles up memory.
 - The toolbar is 15 % smaller.
 - A new logo and pen icon.
 - A smaller install: unused Qt libraries and the FFmpeg multimedia stack are
