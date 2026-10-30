@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!--
+    pen.svg — the ballpoint pen.
+
+    Same idiom as highlighter.svg and brush.svg: the barrel in a group rotated
+    -45 so the tip points down-left, and the mark the tool leaves drawn under
+    the tip. The old icon was a thin barrel with a navy nib and no mark; on the
+    dark toolbar the nib all but vanished and the pen read as a dark sliver.
+    Everything here is light enough to hold its shape on a dark surface.
+  -->
+  <defs>
+    <linearGradient id="penBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#8fd8ff"/>
+      <stop offset="100%" stop-color="#3a8dff"/>
+    </linearGradient>
+    <linearGradient id="penGrip" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#eef6ff"/>
+      <stop offset="100%" stop-color="#a9cfff"/>
+    </linearGradient>
+    <linearGradient id="penNib" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c9d6e6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- The line it writes: a short, smooth stroke leaving the tip -->
+  <path d="M13 53 C 21 46, 28 59, 40 52" fill="none" stroke="#5ab8ff"
+        stroke-width="3.6" stroke-linecap="round"/>
+
+  <g transform="rotate(-45 32 32) translate(32 32) scale(1.16) translate(-32 -32)">
+    <!-- Barrel -->
+    <rect x="23" y="26.5" width="29" height="11" rx="5.5" fill="url(#penBody)"/>
+    <!-- Top sheen -->
+    <rect x="25" y="27.6" width="24" height="3.2" rx="1.6" fill="#ffffff" fill-opacity="0.38"/>
+    <!-- Clip on the cap end -->
+    <rect x="40" y="24.6" width="11" height="2.6" rx="1.3" fill="#d9ecff"/>
+    <!-- Grip section -->
+    <rect x="16" y="27.3" width="8.5" height="9.4" rx="2.4" fill="url(#penGrip)"/>
+    <!-- Nib cone -->
+    <path d="M16.4 27.6 L16.4 36.4 L7.6 32 Z" fill="url(#penNib)"/>
+    <!-- Ink at the point -->
+    <circle cx="8.3" cy="32" r="1.5" fill="#3a8dff"/>
+  </g>
+</svg>

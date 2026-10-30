@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="arrShaft" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="arrHead" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="arrSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- horizontal shaft, vertically centered (symmetric about y=32) -->
+  <rect x="8" y="28" width="34" height="8" rx="4" ry="4" fill="url(#arrShaft)"/>
+  <!-- arrow head: a triangle that's symmetric across y=32, with the tip at x=58
+       and the base from (38,16) to (38,48). The neck overlaps the shaft so
+       the join is seamless without any visible gap. -->
+  <path d="M38 16 L58 32 L38 48 Z" fill="url(#arrHead)"/>
+  <!-- subtle top-edge sheen on the arrow head only (kept symmetric overall via low alpha) -->
+  <path d="M38 16 L58 32 L48 32 L44 20 Z" fill="url(#arrSheen)"/>
+</svg>

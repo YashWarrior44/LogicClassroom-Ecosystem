@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="pdfBody" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="pdfFold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="pdfBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#9a3412"/>
+    </linearGradient>
+  </defs>
+  <!-- Document body — all corners rounded (r=4); top-right is the fold -->
+  <path d="M16 8 L42 8 L52 18 L52 54 A4 4 0 0 1 48 58 L16 58 A4 4 0 0 1 12 54 L12 12 A4 4 0 0 1 16 8 Z" fill="url(#pdfBody)"/>
+  <!-- Folded corner -->
+  <path d="M42 8 L52 18 L42 18 Z" fill="url(#pdfFold)"/>
+  <path d="M42 8 L42 18 L52 18" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1"/>
+  <!-- Text lines -->
+  <line x1="18" y1="24" x2="36" y2="24" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
+  <line x1="18" y1="30" x2="33" y2="30" stroke="#ffffff" stroke-opacity="0.30" stroke-width="2" stroke-linecap="round"/>
+  <!-- Badge strip — flat top, rounded bottom corners matching the body -->
+  <path d="M12 40 L52 40 L52 54 A4 4 0 0 1 48 58 L16 58 A4 4 0 0 1 12 54 Z" fill="url(#pdfBadge)"/>
+  <rect x="12" y="40" width="40" height="3" fill="#000000" fill-opacity="0.15"/>
+  <text x="32" y="53" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">PDF</text>
+</svg>

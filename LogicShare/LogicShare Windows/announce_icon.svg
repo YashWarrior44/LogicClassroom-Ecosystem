@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="horn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#7cd0ff"/>
+      <stop offset="100%" stop-color="#2596e3"/>
+    </linearGradient>
+  </defs>
+  <!-- Broadcast arcs -->
+  <path d="M 44 18 Q 54 32 44 46" fill="none" stroke="#7cd0ff"
+        stroke-width="3.2" stroke-linecap="round" opacity="0.55"/>
+  <path d="M 50 12 Q 64 32 50 52" fill="none" stroke="#7cd0ff"
+        stroke-width="3.2" stroke-linecap="round" opacity="0.30"/>
+  <!-- Megaphone body -->
+  <path d="M 10 27 L 28 27 L 42 17 L 42 47 L 28 37 L 10 37 Z"
+        fill="url(#horn)" stroke="#ffffff" stroke-width="1.4"
+        stroke-linejoin="round"/>
+  <!-- Handle -->
+  <rect x="18" y="37" width="8" height="13" rx="3" fill="url(#horn)"
+        stroke="#ffffff" stroke-width="1.2"/>
+</svg>

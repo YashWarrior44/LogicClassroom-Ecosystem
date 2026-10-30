@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#7cd0ff"/>
+      <stop offset="100%" stop-color="#2596e3"/>
+    </linearGradient>
+    <linearGradient id="planeTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dcecff"/>
+    </linearGradient>
+    <linearGradient id="planeBot" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#a8d4ee"/>
+      <stop offset="100%" stop-color="#4f93c4"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App-tile background -->
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+
+  <!-- Top sheen for depth -->
+  <rect width="256" height="128" rx="56" fill="url(#sheen)"/>
+
+  <!-- Wireless waves (the "share" half of LogicShare) -->
+  <path d="M 44 92 Q 8 140 44 188" fill="none"
+        stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.55"/>
+  <path d="M 62 112 Q 40 140 62 168" fill="none"
+        stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.88"/>
+
+  <!-- Soft ground shadow under the plane -->
+  <ellipse cx="148" cy="218" rx="58" ry="6" fill="#1d4f78" opacity="0.18"/>
+
+  <!-- Paper plane bottom (shaded) face -->
+  <path d="M 74 150 L 134 172 L 182 220 Z" fill="url(#planeBot)"/>
+
+  <!-- Paper plane top (lit) face -->
+  <path d="M 74 150 L 222 54 L 134 172 Z" fill="url(#planeTop)"/>
+
+  <!-- Crease highlight -->
+  <line x1="74" y1="150" x2="134" y2="172"
+        stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The window background matches the app's backdrop, so the first frame
+         and the cold-start gap show the same deep blue as the app itself. -->
+    <style name="Theme.LogicShare" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/backdrop</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/backdrop</item>
+    </style>
+    <color name="backdrop">#FF0D1522</color>
+</resources>

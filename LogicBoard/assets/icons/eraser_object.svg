@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- eraser_object.svg — the Object eraser: a WHOLE stroke goes at once.
+       The stroke sits in a dashed box (it is erased as one object), and the
+       eraser from eraser.svg touches its corner. -->
+  <defs>
+    <linearGradient id="eoTip" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbcfe8"/><stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="eoHolder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ede9fe"/><stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+  <rect x="7" y="10" width="36" height="28" rx="5" fill="#5ab8ff" fill-opacity="0.12"
+        stroke="#5ab8ff" stroke-width="2" stroke-dasharray="4 3"/>
+  <path d="M13 30 C 18 16, 24 34, 29 22 S 37 18, 38 26" fill="none" stroke="#5ab8ff"
+        stroke-width="3.6" stroke-linecap="round"/>
+  <g transform="translate(36 38) rotate(-30) translate(-13 -9) scale(0.62)">
+    <rect x="0" y="0" width="38" height="18" rx="5" fill="url(#eoHolder)"/>
+    <path d="M5 0 H20 V18 H5 A5 5 0 0 1 0 13 V5 A5 5 0 0 1 5 0 Z" fill="url(#eoTip)"/>
+    <line x1="20" y1="0" x2="20" y2="18" stroke="#b59ef0" stroke-width="1.4"/>
+    <path d="M5 0 H33 A5 5 0 0 1 38 5 V6 H0 V5 A5 5 0 0 1 5 0 Z" fill="#ffffff" fill-opacity="0.22"/>
+  </g>
+</svg>

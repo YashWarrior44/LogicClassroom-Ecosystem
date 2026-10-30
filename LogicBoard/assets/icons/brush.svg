@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!--
+    brush.svg — the brush pen.
+
+    Built in the same idiom as pen.svg / highlighter.svg / eraser.svg: a
+    64x64 box, solid gradient fills (no currentColor — these icons are
+    colour-coded, not monochrome), the barrel in a group rotated -45, and the
+    ink it lays down shown underneath the tip.
+
+    Four things separate it from the highlighter it sits next to, and each one
+    is a property the tool actually has:
+
+      * THE NIB IS CUT ON A SLANT. The highlighter's chisel is cut square;
+        this one is oblique, which is the visual shorthand for a calligraphy
+        nib and is precisely why the stroke width changes with direction.
+      * THE INK MARK TAPERS — fat where the stroke was pulled down-right,
+        hairline where it lifted up-right. That is measurably what the
+        renderer produces at BRUSH_NIB_ANGLE_DEG (30 px against 6 px).
+      * THE MARK IS OPAQUE. The highlighter's swipe is drawn at 0.82 alpha
+        because a highlighter is translucent; a brush is not, and the icons
+        should not disagree with the tools.
+      * GREEN, because blue, yellow, purple and pink are taken by the four
+        tools it shares the panel with.
+  -->
+  <defs>
+    <linearGradient id="brBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#6ee7b7"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="brNib" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#d1fae5"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="brInk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <!-- The stroke it leaves: thick on the pull, tapering to a hairline on the
+       lift. Opaque, unlike the highlighter's swipe. -->
+  <path d="M9 52 C 21 46, 33 43, 48 43.2
+           L 48 46 C 34 46.6, 22 51, 11 58 Z"
+        fill="url(#brInk)"/>
+
+  <g transform="rotate(-45 32 33)">
+    <!-- Barrel -->
+    <rect x="26" y="26" width="26" height="14" rx="5" fill="url(#brBody)"/>
+    <!-- back butt-cap -->
+    <rect x="48" y="26" width="4" height="14" rx="2" fill="#047857"/>
+    <!-- top sheen, so the barrel reads round rather than flat -->
+    <rect x="28" y="27" width="22" height="4" rx="2" fill="#ffffff" fill-opacity="0.32"/>
+    <!-- underside shadow, the other half of that roundness -->
+    <rect x="28" y="37" width="22" height="2.4" rx="1.2" fill="#065f46" fill-opacity="0.35"/>
+
+    <!-- Collar band between barrel and nib -->
+    <rect x="21" y="26" width="6" height="14" fill="#047857"/>
+
+    <!-- The chisel nib, cut OBLIQUELY. The tip edge runs from (15,27) down
+         to (10,41) — leaning, where the highlighter's is upright. -->
+    <path d="M21 26 L21 40 L10 41 L15 27 Z" fill="url(#brNib)"/>
+    <!-- The working edge itself, picked out along the slanted cut. -->
+    <path d="M15 27 L10 41 L12.4 41.7 L17.2 27.6 Z"
+          fill="#ffffff" fill-opacity="0.42"/>
+  </g>
+</svg>

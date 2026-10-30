@@ -1,0 +1,13 @@
+# LogicBoard and LogicShare (Windows) — Python 3.11, Windows 10/11.
+PySide6>=6.7
+PyMuPDF>=1.24
+Pillow>=10.0
+requests>=2.31
+zeroconf>=0.130
+flask>=3.0
+pywin32>=306
+pywinstyles>=1.8
+windows-toasts>=1.1
+
+# Packaging (only to build the installers)
+pyinstaller>=6.0

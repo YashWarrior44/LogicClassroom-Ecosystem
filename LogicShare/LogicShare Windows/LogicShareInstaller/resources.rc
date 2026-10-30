@@ -1,0 +1,61 @@
+// resources.rc — everything the installer needs to be a single-file EXE.
+//
+// The .rc compiler bakes these payloads into the final binary. At install
+// time the C++ code pulls them back out via FindResource / LoadResource /
+// LockResource without ever touching the disk except to write the extracted
+// files into Program Files.
+//
+// Numeric IDs matter — they must match the constants in
+// LogicShareInstaller.cpp (100 = icon group, 102 = raw icon bytes,
+// LOGICSHARE_ZIP = named payload).
+
+#include <windows.h>
+
+// -----------------------------------------------------------------------------
+// App icon — 100 is the "icon group" resource that Windows picks up
+// automatically for the taskbar / Alt-Tab thumbnail. The raw .ico bytes
+// are ALSO embedded a second time as RCDATA (id 102) so the installer
+// can drop a copy on disk for shortcuts and Apps & Features to reference.
+// -----------------------------------------------------------------------------
+100 ICON "logo.ico"
+102 RCDATA "logo.ico"
+
+// -----------------------------------------------------------------------------
+// The LogicShare payload — everything the ZIP contains gets extracted into
+// C:\Program Files\LogicShare\LogicShare_V<version>\ during install.
+// -----------------------------------------------------------------------------
+LOGICSHARE_ZIP RCDATA "LogicShare.zip"
+
+// -----------------------------------------------------------------------------
+// Version block — helps Windows show sensible metadata in File Properties
+// and the smart-screen prompt. Must stay in step with APP_VERSION_TEXT in
+// LogicShareInstaller.cpp and APP_VERSION in LogicShare.py: the app compares
+// its own version against the GitHub release tag to decide whether an update
+// exists, and a disagreement between these three is how you get an installer
+// that offers to "update" to the build already on disk.
+// -----------------------------------------------------------------------------
+1 VERSIONINFO
+FILEVERSION     1,1,2,0
+PRODUCTVERSION  1,1,2,0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "LogicClassroom"
+            VALUE "FileDescription",  "LogicShare Installer"
+            VALUE "FileVersion",      "1.1.2"
+            VALUE "InternalName",     "LogicShareInstaller"
+            VALUE "OriginalFilename", "LogicShareInstaller.exe"
+            VALUE "ProductName",      "LogicShare"
+            VALUE "ProductVersion",   "1.1.2"
+            VALUE "LegalCopyright",   "Copyright (C) 2026 Yash Jain. Licensed under GPL-3.0."
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0x04b0
+    END
+END

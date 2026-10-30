@@ -1,0 +1,16 @@
+# Text files are stored with LF in the repository and checked out in each
+# platform's native style. Windows-only scripts keep CRLF; the Gradle
+# wrapper script must stay LF or it will not run on macOS/Linux.
+* text=auto
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+gradlew text eol=lf
+
+# Binary assets — never touched.
+*.ico   binary
+*.png   binary
+*.jpg   binary
+*.wav   binary
+*.jar   binary
+*.pdf   binary

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="imgFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="imgSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bbf7e4"/>
+      <stop offset="100%" stop-color="#86ecca"/>
+    </linearGradient>
+    <radialGradient id="imgSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#fdfdf4"/>
+      <stop offset="100%" stop-color="#fef9c3"/>
+    </radialGradient>
+    <linearGradient id="imgMtn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="imgMtn2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22cdb9"/>
+      <stop offset="100%" stop-color="#12b2a1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer rounded frame -->
+  <rect x="9" y="12" width="46" height="40" rx="9" fill="url(#imgFrame)"/>
+  <!-- Inner picture window -->
+  <rect x="14" y="17" width="36" height="30" rx="5" fill="url(#imgSky)"/>
+
+  <!-- Sun, top-left, clear of the peaks -->
+  <circle cx="22.5" cy="25" r="4" fill="url(#imgSun)"/>
+
+  <!-- Mountain range. Bases sit flat on the inner floor (y=47) inside the
+       safe zone x=19..45 so they never clip the rounded inner corners.
+       The two ranges overlap for depth, reading as one connected silhouette. -->
+  <path d="M19 47 L28 34 L38 47 Z" fill="url(#imgMtn2)"/>
+  <path d="M28 47 L38 28 L45 47 Z" fill="url(#imgMtn)"/>
+  <!-- Snow cap nestled on the front peak -->
+  <path d="M35.6 31.4 L38 28 L40.4 31.4 L39.1 30.7 L38 31.6 L36.9 30.7 Z"
+        fill="#ffffff" fill-opacity="0.9"/>
+
+  <!-- Frame top sheen — soft rounded band -->
+  <path d="M18 12 H46 A9 9 0 0 1 55 21 V22 H9 V21 A9 9 0 0 1 18 12 Z"
+        fill="#ffffff" fill-opacity="0.16"/>
+</svg>

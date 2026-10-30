@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="gearSoftBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#a9d4ff"/>
+      <stop offset="55%" stop-color="#8bb8f5"/>
+      <stop offset="100%" stop-color="#9d9ef0"/>
+    </linearGradient>
+    <radialGradient id="gearWeb" cx="42%" cy="38%" r="72%">
+      <stop offset="0%"  stop-color="#bcd2fb"/>
+      <stop offset="100%" stop-color="#93a9e8"/>
+    </radialGradient>
+    <radialGradient id="gearBolt" cx="40%" cy="35%" r="75%">
+      <stop offset="0%"  stop-color="#6f86c4"/>
+      <stop offset="100%" stop-color="#52689f"/>
+    </radialGradient>
+    <radialGradient id="gearHole" cx="42%" cy="38%" r="70%">
+      <stop offset="0%"  stop-color="#8ea4d8"/>
+      <stop offset="100%" stop-color="#6f86c4"/>
+    </radialGradient>
+    <radialGradient id="gearHub" cx="38%" cy="34%" r="80%">
+      <stop offset="0%"  stop-color="#f4f7ff"/>
+      <stop offset="55%" stop-color="#cdd9f7"/>
+      <stop offset="100%" stop-color="#9fb4ec"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Cog body (symmetric computed path) -->
+  <path fill="url(#gearSoftBody)" d="M 26.848 5.496 L 37.152 5.496 L 37.478 12.246 L 42.095 14.158 L 47.098 9.616 L 54.384 16.902 L 49.842 21.905 L 51.754 26.522 L 58.504 26.848 L 58.504 37.152 L 51.754 37.478 L 49.842 42.095 L 54.384 47.098 L 47.098 54.384 L 42.095 49.842 L 37.478 51.754 L 37.152 58.504 L 26.848 58.504 L 26.522 51.754 L 21.905 49.842 L 16.902 54.384 L 9.616 47.098 L 14.158 42.095 L 12.246 37.478 L 5.496 37.152 L 5.496 26.848 L 12.246 26.522 L 14.158 21.905 L 9.616 16.902 L 16.902 9.616 L 21.905 14.158 L 26.522 12.246 Z"/>
+  <!-- 2. Crisp rim stroke to define the teeth edges -->
+  <path fill="none" stroke="#6f86c4" stroke-opacity="0.45" stroke-width="0.8"
+        stroke-linejoin="round" d="M 26.848 5.496 L 37.152 5.496 L 37.478 12.246 L 42.095 14.158 L 47.098 9.616 L 54.384 16.902 L 49.842 21.905 L 51.754 26.522 L 58.504 26.848 L 58.504 37.152 L 51.754 37.478 L 49.842 42.095 L 54.384 47.098 L 47.098 54.384 L 42.095 49.842 L 37.478 51.754 L 37.152 58.504 L 26.848 58.504 L 26.522 51.754 L 21.905 49.842 L 16.902 54.384 L 9.616 47.098 L 14.158 42.095 L 12.246 37.478 L 5.496 37.152 L 5.496 26.848 L 12.246 26.522 L 14.158 21.905 L 9.616 16.902 L 16.902 9.616 L 21.905 14.158 L 26.522 12.246 Z"/>
+
+  <!-- 3. Raised web disc (sits inside the teeth roots) -->
+  <circle cx="32" cy="32" r="18.5" fill="url(#gearWeb)"/>
+  <!-- 4. Concentric groove ring for mechanical detail -->
+  <circle cx="32" cy="32" r="18.5" fill="none" stroke="#ffffff" stroke-opacity="0.30" stroke-width="0.9"/>
+  <circle cx="32" cy="32" r="13.0" fill="none" stroke="#5c73ac" stroke-opacity="0.35" stroke-width="0.8"/>
+
+  <!-- 5. Bolt / lightening holes (6, evenly spaced) -->
+  <circle cx="39.75" cy="18.577" r="2.4" fill="url(#gearBolt)"/>
+  <circle cx="39.75" cy="17.877000000000002" r="1.1" fill="#ffffff" fill-opacity="0.45"/>
+  <circle cx="47.5" cy="32.0" r="2.4" fill="url(#gearBolt)"/>
+  <circle cx="47.5" cy="31.3" r="1.1" fill="#ffffff" fill-opacity="0.45"/>
+  <circle cx="39.75" cy="45.423" r="2.4" fill="url(#gearBolt)"/>
+  <circle cx="39.75" cy="44.723" r="1.1" fill="#ffffff" fill-opacity="0.45"/>
+  <circle cx="24.25" cy="45.423" r="2.4" fill="url(#gearBolt)"/>
+  <circle cx="24.25" cy="44.723" r="1.1" fill="#ffffff" fill-opacity="0.45"/>
+  <circle cx="16.5" cy="32.0" r="2.4" fill="url(#gearBolt)"/>
+  <circle cx="16.5" cy="31.3" r="1.1" fill="#ffffff" fill-opacity="0.45"/>
+  <circle cx="24.25" cy="18.577" r="2.4" fill="url(#gearBolt)"/>
+  <circle cx="24.25" cy="17.877000000000002" r="1.1" fill="#ffffff" fill-opacity="0.45"/>
+
+  <!-- 6. Recessed center hole + raised hub -->
+  <circle cx="32" cy="32" r="9.5" fill="url(#gearHole)"/>
+  <circle cx="32" cy="32" r="6.8" fill="url(#gearHub)"/>
+  <circle cx="32" cy="32" r="6.8" fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="1"/>
+  <!-- 7. Screw slot on the hub -->
+  <rect x="31.1" y="27.8" width="1.8" height="8.4" rx="0.9" fill="#7e93cd" fill-opacity="0.55"/>
+
+  <!-- 8. Top sheen highlight on the upper teeth -->
+  <path d="M26.848 5.496 H37.152 L37.0 9.2 H27.0 Z" fill="#ffffff" fill-opacity="0.40"/>
+</svg>

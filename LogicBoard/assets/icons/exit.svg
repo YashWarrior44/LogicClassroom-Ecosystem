@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="exitDoor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fda4af"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="exitArrow" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#fecdd3"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <linearGradient id="exitDoorSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Door frame on the left half (rounded rect with one open side facing
+       right). Symmetric vertically about y=32. -->
+  <path d="M10 14 L26 14 L26 26 L24 26 L24 16 L12 16 L12 48 L24 48 L24 38 L26 38 L26 50 L10 50 Z"
+        fill="url(#exitDoor)"/>
+  <!-- Door sheen — top-left to middle, low alpha. -->
+  <path d="M12 16 L24 16 L24 34 L12 34 Z" fill="url(#exitDoorSheen)" opacity="0.4"/>
+  <!-- Arrow flying out to the right. Shaft vertically centered on y=32.
+       Tip at x=54, base from (40,24) to (40,40) — symmetric about y=32. -->
+  <rect x="22" y="28" width="20" height="8" rx="4" ry="4" fill="url(#exitArrow)"/>
+  <path d="M40 22 L54 32 L40 42 Z" fill="url(#exitArrow)"/>
+</svg>

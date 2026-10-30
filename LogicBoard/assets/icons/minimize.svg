@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="minBarGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#9ca3af"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#9ca3af"/>
+    </linearGradient>
+    <linearGradient id="minBarSheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Single rounded bar centered at y=40 (lower third of icon, like a
+       window's minimize indicator). Width 40px, height 8px, radius 4px.
+       Symmetric about both axes. -->
+  <rect x="12" y="36" width="40" height="8" rx="4" ry="4" fill="url(#minBarGrad)"/>
+  <!-- Subtle top sheen on the bar for a glossy/modern feel. -->
+  <rect x="14" y="37" width="36" height="3" rx="1.5" ry="1.5" fill="url(#minBarSheen)"/>
+</svg>

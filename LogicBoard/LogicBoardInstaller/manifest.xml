@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+  <!-- asInvoker — NO elevation.
+
+       LogicBoard installs into %USERPROFILE%\LogicBoard and registers under
+       HKCU, and none of that needs administrator rights. Asking for them
+       anyway would put a consent prompt in front of every routine update, on
+       machines (school OPS panels) where the person doing the update often
+       cannot answer it.
+
+       The operations that genuinely ARE privileged re-launch this same exe
+       through the "runas" verb instead, so the prompt appears only when
+       something actually needs it:
+
+         * Deleting a previous machine-wide install out of Program Files,
+           along with its HKLM entries and all-users shortcuts — the
+           internal remove-legacy switch, and only when such an install is
+           found.
+
+         * THE UNINSTALL, every time. An uninstall has more to remove than
+           the install put down: a machine that has been through the
+           Program Files era still carries HKLM Uninstall / App Paths / Run
+           values, all-users shortcuts, and firewall rules naming the app,
+           and every one of those used to fail silently for want of rights.
+           What that looked like was LogicBoard still sitting in Apps &
+           Features after being uninstalled. See ElevateForUninstall.
+
+       Note the asymmetry, and that it is deliberate: INSTALL never prompts,
+       UNINSTALL always does. An install (and therefore every update) has to
+       be answerable by whoever is standing at the board; an uninstall is
+       rare, deliberate, and worth a gate. -->
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel level="asInvoker" uiAccess="false"/>
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+
+  <!-- Declare per-monitor DPI awareness so the installer stays crisp on
+       high-DPI smart boards. Matches the SetProcessDpiAwarenessContext
+       call in WinMain, but the manifest declaration is the more robust
+       path — takes effect before any window is created. -->
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <windowsSettings>
+      <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true/pm</dpiAware>
+      <dpiAwareness xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">PerMonitorV2</dpiAwareness>
+      <activeCodePage xmlns="http://schemas.microsoft.com/SMI/2019/WindowsSettings">UTF-8</activeCodePage>
+    </windowsSettings>
+  </application>
+
+  <!-- Windows 10 + 11 compatibility declaration. Without this Windows
+       treats us like a Windows 8 app for some APIs. -->
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Windows 10 -->
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/>
+      <!-- Windows 11 uses the Windows 10 GUID as well. -->
+    </application>
+  </compatibility>
+
+  <!-- Modern common-controls (v6) so any standard controls we accidentally
+       spawn look native, not Windows-95. -->
+  <dependency>
+    <dependentAssembly>
+      <assemblyIdentity type="win32"
+                        name="Microsoft.Windows.Common-Controls"
+                        version="6.0.0.0"
+                        processorArchitecture="*"
+                        publicKeyToken="6595b64144ccf1df"
+                        language="*"/>
+    </dependentAssembly>
+  </dependency>
+</assembly>

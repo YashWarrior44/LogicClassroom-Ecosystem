@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Android 12+ always draws a system splash before the first frame. The
+      Flutter build was set, at the user's request, to show NO native splash
+      logo — only the app's own screen — and this keeps that: a transparent
+      icon on the app's backdrop colour, so the splash is indistinguishable
+      from the app opening.
+    -->
+    <style name="Theme.LogicShare" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/backdrop</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/backdrop</item>
+        <item name="android:windowSplashScreenBackground">@color/backdrop</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_icon_none</item>
+    </style>
+</resources>

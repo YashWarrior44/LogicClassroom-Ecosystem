@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Palette body -->
+  <path d="M12 2a10 10 0 1 0 0 20 2 2 0 0 0 2-2v-1.5A1.5 1.5 0 0 1 15.5 17H18a4 4 0 0 0 4-4 11 11 0 0 0-10-11z"/>
+  <!-- Paint dots -->
+  <circle cx="7.5"  cy="10.5" r="1.2" fill="currentColor" stroke="none"/>
+  <circle cx="11"   cy="7"    r="1.2" fill="currentColor" stroke="none"/>
+  <circle cx="15.5" cy="8"    r="1.2" fill="currentColor" stroke="none"/>
+  <circle cx="17.5" cy="12.5" r="1.2" fill="currentColor" stroke="none"/>
+</svg>

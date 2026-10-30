@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- eraser_lasso.svg — the Lasso eraser: draw a loop, everything inside
+       goes. A dashed pink loop around some ink, closing at the eraser. -->
+  <defs>
+    <linearGradient id="elTip" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbcfe8"/><stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="elHolder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ede9fe"/><stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 41 C 24 46, 6 40, 7 26 C 8 12, 30 6, 44 13 C 54 18, 53 30, 46 36"
+        fill="#f472b6" fill-opacity="0.12" stroke="#f472b6" stroke-width="2.6"
+        stroke-dasharray="5 3.5" stroke-linecap="round"/>
+  <path d="M15 29 C 19 18, 24 33, 28 22 S 35 19, 37 26" fill="none" stroke="#5ab8ff"
+        stroke-width="3.4" stroke-linecap="round"/>
+  <g transform="translate(46 44) rotate(-30) translate(-6 -9) scale(0.6)">
+    <rect x="0" y="0" width="38" height="18" rx="5" fill="url(#elHolder)"/>
+    <path d="M5 0 H20 V18 H5 A5 5 0 0 1 0 13 V5 A5 5 0 0 1 5 0 Z" fill="url(#elTip)"/>
+    <line x1="20" y1="0" x2="20" y2="18" stroke="#b59ef0" stroke-width="1.4"/>
+    <path d="M5 0 H33 A5 5 0 0 1 38 5 V6 H0 V5 A5 5 0 0 1 5 0 Z" fill="#ffffff" fill-opacity="0.22"/>
+  </g>
+</svg>
