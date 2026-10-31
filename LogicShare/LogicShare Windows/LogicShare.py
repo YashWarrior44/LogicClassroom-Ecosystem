@@ -707,7 +707,7 @@ APP_USER_MODEL_ID = "InnovaLogiX.LogicShare"
 # real one. Format is MAJOR.MINOR.PATCH, and GitHub tags carry a leading
 # "v" that _parse_version strips.
 # ---------------------------------------------------------------------------
-APP_VERSION = "1.1.2"
+APP_VERSION = "1.1.3"
 
 # The repo whose Releases page publishes LogicShare builds. The updater is
 # inert while this is blank, which is what makes a dev build safe to run.

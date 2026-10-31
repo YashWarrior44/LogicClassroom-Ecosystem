@@ -44,10 +44,10 @@ reason about two different LogicShare versions.
 """
 
 # ── the numbers ──────────────────────────────────────────────────────────
-LOGICBOARD = "3.1.3"
+LOGICBOARD = "3.1.4"
 
 # Windows and Android both. See the note above.
-LOGICSHARE = "1.1.2"
+LOGICSHARE = "1.1.3"
 
 # Android's versionCode: an integer that must INCREASE on every build the
 # Play Store or a device sees, independently of the human-facing version.
@@ -56,7 +56,7 @@ LOGICSHARE = "1.1.2"
 # 4: the Kotlin rewrite, replacing the Flutter build (3). It installs over
 # 3 in place because it keeps the package name and signing key.
 # 5: 1.1.2 — update consent (download, then ask before installing).
-LOGICSHARE_ANDROID_BUILD = 5
+LOGICSHARE_ANDROID_BUILD = 6
 
 
 __all__ = ["LOGICBOARD", "LOGICSHARE", "LOGICSHARE_ANDROID_BUILD"]

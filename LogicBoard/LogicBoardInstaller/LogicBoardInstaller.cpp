@@ -95,7 +95,7 @@ constexpr wchar_t APP_PUBLISHER[]  = L"LogicClassroom";       // shown in Apps &
 // UI strings paste it into an adjacent-literal concatenation
 // (L"...v" APP_VERSION_TEXT L"...") and a constexpr array cannot be used
 // that way. The array is derived from the macro so they cannot drift.
-#define APP_VERSION_TEXT L"3.1.3"
+#define APP_VERSION_TEXT L"3.1.4"
 constexpr wchar_t APP_VERSION[]    = APP_VERSION_TEXT;
 constexpr wchar_t APP_EXE[]        = L"LogicBoard.exe";
 // AppUserModelID — an internal, stable Windows grouping id (taskbar

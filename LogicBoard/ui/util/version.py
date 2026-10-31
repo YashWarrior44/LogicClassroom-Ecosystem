@@ -23,7 +23,7 @@ __all__ = ["APP_VERSION", "APP_NAME", "SemVer"]
 # Format: MAJOR.MINOR.PATCH (semver). No pre-release / build suffixes for
 # now; the updater's SemVer parser handles those if we ever need them.
 # ---------------------------------------------------------------------------
-APP_VERSION = "3.1.3"
+APP_VERSION = "3.1.4"
 
 # Human-readable product name. Used for Windows registrations, shortcuts,
 # taskbar tooltip, etc. NEVER include the version here — the version is a

@@ -31,8 +31,8 @@ LOGICBOARD_ZIP RCDATA "LogicBoard.zip"
 // and the smart-screen prompt. Bump when the installer version changes.
 // -----------------------------------------------------------------------------
 1 VERSIONINFO
-FILEVERSION     3,1,3,0
-PRODUCTVERSION  3,1,3,0
+FILEVERSION     3,1,4,0
+PRODUCTVERSION  3,1,4,0
 FILEOS          VOS_NT_WINDOWS32
 FILETYPE        VFT_APP
 BEGIN
@@ -42,11 +42,11 @@ BEGIN
         BEGIN
             VALUE "CompanyName",      "LogicClassroom"
             VALUE "FileDescription",  "LogicBoard Installer"
-            VALUE "FileVersion",      "3.1.3"
+            VALUE "FileVersion",      "3.1.4"
             VALUE "InternalName",     "LogicBoardInstaller"
             VALUE "OriginalFilename", "LogicBoardInstaller.exe"
             VALUE "ProductName",      "LogicBoard"
-            VALUE "ProductVersion",   "3.1.3"
+            VALUE "ProductVersion",   "3.1.4"
             VALUE "LegalCopyright",   "Copyright (C) 2026 Yash Jain. Licensed under GPL-3.0."
         END
     END

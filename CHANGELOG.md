@@ -1,10 +1,15 @@
 # Changelog
 
-## Unreleased — since LogicBoard 3.1.3 and LogicShare 1.1.2
+## LogicBoard 3.1.4 · LogicShare 1.1.3
 
 The whole ecosystem is now free and open source under the GPL-3.0, and all
 three apps update from this repository's Releases (`LogicBoard-v*` and
 `LogicShare-v*` tags).
+
+These versions are also published once in the apps' old repositories
+(`LogicBoard`, `LogicShare-Windows`, `LogicShare_Android`), so copies
+installed before the move pick them up and follow this repository from
+then on.
 
 ### LogicBoard
 

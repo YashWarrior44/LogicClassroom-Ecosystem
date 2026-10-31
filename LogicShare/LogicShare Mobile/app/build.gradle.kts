@@ -19,8 +19,8 @@ android {
         // versionCode must only ever go UP: Android refuses to install an
         // update whose code is not higher than the installed one. The Flutter
         // V1.1.1 build was 3.
-        versionCode = 5
-        versionName = "1.1.2"
+        versionCode = 6
+        versionName = "1.1.3"
     }
 
     signingConfigs {
